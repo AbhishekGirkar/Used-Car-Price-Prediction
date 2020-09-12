@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script  src="ucp_prediction.js">
+    </script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style type="text/css">
+      #form1{
+        border-radius: 10px;
+        width: 50%;
+        margin:auto;
+        height: 800px;
+        border-style: solid;
+        background:rgba(255, 255, 255, 0.8);
+        }
+    </style>
+
+    <title>Car Price Prediction</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="car.jpg" style="width:100%;">
+        </div>
+    <div id="form1" class="col-lg-6">
+      <form style="padding: 2% 0%" >
+        <h2>Car price prediction</h2>
+        <br/>
+        <div class="input-group">
+         <input type="Year" class="form-control" id="purchased_year" placeholder="Purchase Year" >
+         <input type="number" class="form-control" id="kilometer_driven" placeholder="Kilometer drive">
+       </div>
+       <div class="input-group mt-2">
+         <input type="number" class="form-control" id="seat" placeholder="Seat" style="margin-top: 10px">
+         <input type="number" class="form-control" id="mileage" placeholder="Mileage (km/kg)" style="margin-top: 10px">
+       </div>
+       <div class="input-group mt-2">
+         <input type="number" class="form-control" id="power" placeholder="Power (bhp)" style="margin-top: 10px">
+         <input type="number" class="form-control" id="engine" placeholder="Engine (cc)" style="margin-top: 10px">
+       </div>
+       <div class="input-group mt-3">
+        <div class="w-50">
+         <label style="margin-top: 10px">Owner Type:</label>
+         <select id="owenertype" class="form-control" name="cars">
+          <option value="0">First</option>
+          <option value="1">Second</option>
+          <option value="2">Third</option>
+          <option value="3">Fourth & Above</option>
+         </select>
+       </div>
+       <div class="w-50">
+         <label style="margin-top:10px">Fuel Type:</label>
+         <select id="fueltype" class="form-control" name="cars">
+          <option value="0">Diesel</option>
+          <option value="1">LPG</option>
+          <option value="2">Petrol</option>
+          <option value="-1">CNG</option>
+         </select>
+       </div>
+       </div>
+       <div class="input-group">
+        <div class="w-50">
+        <label style="margin-top:5px;">Tranmission Type:</label>
+         <select id="transmissiontype" class="form-control" name="cars">
+          <option value="0">Manual</option>
+          <option value="1">Automatic</option>
+         </select>
+       </div>
+       <div class="w-50">
+         <label style="margin-top:5px;">Location:</label>
+         <select id="location" name="cars" class="form-control">
+          <option value="0">Banglore</option>
+          <option value="1">Chennai</option>
+          <option value="2">Coimbatore</option>
+          <option value="3">Delhi</option>
+          <option value="4">Hyderabad</option>
+          <option value="5">Jaipur</option>
+          <option value="6">Mumbai</option>
+          <option value="7">Kochi</option>
+          <option value="8">Kolkata</option>
+          <option value="9">Pune</option>
+          <option value="-1">Ahmedabad </option>
+         </select>
+       </div>
+       </div><br>
+         <button type="button" class="btn btn-dark btn-lg btn-block" id="predict_btn" onclick="predict_val()" style="margin-top: 20px">Predict</button>
+         <div id="pred_val" style="height:;text-align:center;vertical-align:middle;"></div>
+
+
+
+      </form>
+      
+    </div>
+  </div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
